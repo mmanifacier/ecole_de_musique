@@ -1,0 +1,28 @@
+:root {
+    --grey: #6c757d;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 1rem;
+    border: 1px solid var(--grey);
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+legend {
+    width: 50%;
+    background-color: var(--grey);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mm__button-r2 {
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+}

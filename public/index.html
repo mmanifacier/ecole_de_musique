@@ -19,10 +19,10 @@
             <legend>Elève</legend>
 
             <label for="last-name-s"></label>
-            <input type="text" name="last-name-s" id="last-name-s" placeholder="NOM">
+            <input type="text" name="last-name-s" id="last-name-s" placeholder="NOM" autofocus>
 
             <label for="first-name-s"></label>
-            <input type="text" name="first-name-s" id="first-name-s" placeholder="PRENOM" autofocus>
+            <input type="text" name="first-name-s" id="first-name-s" placeholder="PRENOM">
 
             <label for="birth-s"></label>
             <input type="date" name="birth-s" id="birth-s">
@@ -51,18 +51,18 @@
             <p>Sélectionner votre lien avec l'élève :</p>
 
             <div>
-                <input type="radio" id="parent" name="link-student" value="parent"
+                <input type="radio" id="parent" name="link-student-r1" value="parent"
                         checked>
                 <label for="parent">Parent</label>
             </div>
 
             <div>
-                <input type="radio" id="tuteur" name="link-student" value="tuteur">
+                <input type="radio" id="tuteur" name="link-student-r1" value="tuteur">
                 <label for="tuteur">Tuteur</label>
             </div>
 
             <div>
-                <input type="radio" id="other" name="link-student" value="other">
+                <input type="radio" id="other" name="link-student-r1" value="other">
                 <label for="other">Autre</label>
             </div>
 
@@ -90,18 +90,18 @@
             <p>Sélectionner votre lien avec l'élève :</p>
 
             <div>
-                <input type="radio" id="parent" name="link-student" value="parent"
+                <input type="radio" id="parent" name="link-student-r2" value="parent"
                         checked>
                 <label for="parent">Parent</label>
             </div>
 
             <div>
-                <input type="radio" id="tuteur" name="link-student" value="tuteur">
+                <input type="radio" id="tuteur" name="link-student-r2" value="tuteur">
                 <label for="tuteur">Tuteur</label>
             </div>
 
             <div>
-                <input type="radio" id="other" name="link-student" value="other">
+                <input type="radio" id="other" name="link-student-r2" value="other">
                 <label for="other">Autre</label>
             </div>
 
@@ -136,11 +136,21 @@
             <input type="number" name="family-quotient" id="family-quotient">
         </fieldset>
 
-        <!-- CLASSES -->
+        <!-- SCHOOL CHOICE -->
         <fieldset>
+            <legend>Ecole de musique</legend>
+            <select id="school">
+                <option>Choix de l'école de musique</option>
+                <option value="randan">Randan</option>
+                <option value="aigueperse">Aigueperse</option>
+                <option value="maringue">Maringues</option>
+            </select>
+        </fieldset>
+
+        <!-- CLASSES RANDAN -->
+        <fieldset id="randan" class="d-none">
             <legend>Cours</legend>
 
-            <label for="instrument"></label>
             <select name="instrument" id="instrument">
                 <option>Choix d'un instrument</option>
 
@@ -224,6 +234,152 @@
             </div>
 
         </fieldset>
+
+        <!-- CLASSES AIGUEPERSE -->
+        <fieldset id="aigueperse" class="d-none">
+            <legend>Cours</legend>
+
+            <select name="instrument" id="instrument">
+                <option>Choix d'un instrument</option>
+
+                <optgroup label="Bois">
+                    <option value="clarinette">Clarinette</option>
+                    <option value="saxo">Saxophone</option>
+                    <option value="flute">Flûte traversière</option>
+                </optgroup>
+
+                <optgroup label="Cuivres">
+                    <option value="cor">Cor d'harmonie</option>
+                    <option value="trombone">Trombone</option>
+                    <option value="trompette">Trompette</option>
+                    <option value="tuba">Tuba</option>
+                </optgroup>
+
+                <optgroup label="Percussions">
+                    <option value="batterie">Batterie</option>
+                </optgroup>
+            </select>
+
+
+            <p>Sélectionner le cursus :</p>
+
+            <div>
+                <input type="radio" id="em" name="cours" value="em">
+                <label for="em">Eveil musical</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm1" name="cours" value="fm1">
+                <label for="fm1">Formation musicale 1</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm2" name="cours" value="fm2">
+                <label for="fm2">Formation musicale 2</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm3" name="cours" value="fm3">
+                <label for="fm3">Formation musicale 3</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm4" name="cours" value="fm4">
+                <label for="fm4">Formation musicale 4</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm5" name="cours" value="fm5">
+                <label for="fm5">Formation musicale 5</label>
+            </div>
+
+
+            <p>Cours supplémentaires :</p>
+
+            <div>
+                <input type="checkbox" name="choral" id="choral">
+                <label for="cuivres">Ensemble de Cuivres</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="actu-music" id="actu-music">
+                <label for="anches">Ensemble d'Anches</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="orchestra" id="orchestra">
+                <label for="orchestra">Orchestre</label>
+            </div>
+
+        </fieldset>
+
+        <!-- CLASSES MARINGUES -->
+        <fieldset id="maringues" class="d-none">
+            <legend>Cours</legend>
+
+            <select name="instrument" id="instrument">
+                <option>Choix d'un instrument</option>
+
+                <optgroup label="Bois">
+                    <option value="clarinette">Clarinette</option>
+                    <option value="saxo">Saxophone</option>
+                    <option value="flute">Flûte traversière</option>
+                </optgroup>
+
+                <optgroup label="Cuivres">
+                    <option value="trompette">Trompette</option>
+                    <option value="trombone">Trombone</option>
+                    <option value="tuba">Tuba</option>
+                </optgroup>
+
+                <optgroup label="Percussions">
+                    <option value="batterie">Batterie</option>
+                </optgroup>
+            </select>
+
+
+            <p>Sélectionner le cursus :</p>
+
+            <div>
+                <input type="radio" id="em" name="cours" value="em">
+                <label for="em">Eveil musical</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm1" name="cours" value="fm1">
+                <label for="fm1">Formation musicale 1</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm2" name="cours" value="fm2">
+                <label for="fm2">Formation musicale 2</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm3" name="cours" value="fm3">
+                <label for="fm3">Formation musicale 3</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm4" name="cours" value="fm4">
+                <label for="fm4">Formation musicale 4</label>
+            </div>
+
+            <div>
+                <input type="radio" id="fm5" name="cours" value="fm5">
+                <label for="fm5">Formation musicale 5</label>
+            </div>
+
+
+            <p>Cours supplémentaires :</p>
+
+            <div>
+                <input type="checkbox" name="orchestra" id="orchestra">
+                <label for="orchestra">Orchestre</label>
+            </div>
+
+        </fieldset>
+
     </form>
     
     <!-- SCRIPTS -->

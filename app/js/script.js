@@ -24,7 +24,7 @@ const bAigueperse = document.getElementById("aigueperse");
 const bMaringues = document.getElementById("maringues");
 
 bChoiceSchool.addEventListener("onchange", e => {
-    let school = bChoiceSchool.nodeValue;
+    let school = bChoiceSchool.value;
 
     if (school == "randan") {
         bRandan.classList.remove('d-none');

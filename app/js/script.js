@@ -23,14 +23,34 @@ const bRandan = document.getElementById("randan");
 const bAigueperse = document.getElementById("aigueperse");
 const bMaringues = document.getElementById("maringues");
 
-bChoiceSchool.addEventListener("onchange", e => {
+bChoiceSchool.addEventListener("change", function () {
     let school = bChoiceSchool.value;
 
-    if (school == "randan") {
-        bRandan.classList.remove('d-none');
-    } else if (school == "aigueperse") {
-        bAigueperse.classList.remove('d-none');
-    } else {
-        bMaringues.classList.remove('d-none');
+    switch (school) {
+        case "randan":
+            affSchool(bRandan, bAigueperse, bMaringues)
+            break;
+        case "aigueperse":
+            affSchool(bAigueperse, bRandan, bMaringues)
+            break;
+        case "maringues":
+            affSchool(bMaringues, bAigueperse, bRandan)
+            break;
+        default:
+            break;
     }
 })
+
+function affSchool(bCity, b1, b2) {
+        bCity.classList.remove('d-none');
+        majNone(b1);
+        majNone(b2);
+        return;
+}
+
+function majNone(b) {
+    if (b.hasClass("d-none") == false) {
+        b.classList.add('d-none');
+    }
+    return;
+}

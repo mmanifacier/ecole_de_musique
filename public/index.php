@@ -143,12 +143,12 @@
                 <option>Choix de l'école de musique</option>
                 <option value="randan">Randan</option>
                 <option value="aigueperse">Aigueperse</option>
-                <option value="maringue">Maringues</option>
+                <option value="maringues">Maringues</option>
             </select>
         </fieldset>
 
         <!-- CLASSES RANDAN -->
-        <fieldset id="randan" class="d-none">
+        <fieldset class="d-none" data-target="randan">
             <legend>Cours</legend>
 
             <select name="instrument" id="instrument">
@@ -236,7 +236,7 @@
         </fieldset>
 
         <!-- CLASSES AIGUEPERSE -->
-        <fieldset id="aigueperse" class="d-none">
+        <fieldset class="d-none" data-target="aigueperse">
             <legend>Cours</legend>
 
             <select name="instrument" id="instrument">
@@ -314,7 +314,7 @@
         </fieldset>
 
         <!-- CLASSES MARINGUES -->
-        <fieldset id="maringues" class="d-none">
+        <fieldset class="d-none" data-target="maringues">
             <legend>Cours</legend>
 
             <select name="instrument" id="instrument">
@@ -380,6 +380,8 @@
 
         </fieldset>
 
+        <!-- SUBMIT FORM -->
+        <input class="mm__button-r2 btn btn-light btn-outline-secondary" type="submit" value="Soumettre le formulaire">
     </form>
     
     <!-- SCRIPTS -->

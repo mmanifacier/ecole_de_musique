@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- FORM -->
-    <form action="" method="post">
+    <form id="form" action="" method="post">
         <!-- STUDENT -->
         <fieldset>
             <legend>Elève</legend>
@@ -52,7 +52,7 @@
 
             <div>
                 <input type="radio" id="parent" name="link-student-r1" value="parent"
-                        checked>
+                        >
                 <label for="parent">Parent</label>
             </div>
 
@@ -91,7 +91,7 @@
 
             <div>
                 <input type="radio" id="parent" name="link-student-r2" value="parent"
-                        checked>
+                        >
                 <label for="parent">Parent</label>
             </div>
 
@@ -140,7 +140,7 @@
         <fieldset>
             <legend>Ecole de musique</legend>
             <select id="school">
-                <option>Choix de l'école de musique</option>
+                <option value="no-choice">Choix de l'école de musique</option>
                 <option value="randan">Randan</option>
                 <option value="aigueperse">Aigueperse</option>
                 <option value="maringues">Maringues</option>
@@ -381,7 +381,10 @@
         </fieldset>
 
         <!-- SUBMIT FORM -->
-        <input class="mm__button-r2 btn btn-light btn-outline-secondary" type="submit" value="Soumettre le formulaire">
+        <input id="submit-form" class="mm__button-r2 btn btn-light btn-outline-secondary" type="submit" value="Soumettre le formulaire">
+
+        <!-- ERROR SPACE -->
+        <div id="error-message"></div>
     </form>
     
     <!-- SCRIPTS -->
